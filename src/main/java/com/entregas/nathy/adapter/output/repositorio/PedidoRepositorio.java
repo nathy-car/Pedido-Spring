@@ -1,0 +1,14 @@
+package com.entregas.nathy.adapter.output.repositorio;
+
+import com.entregas.nathy.adapter.output.data.PedidoTI;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface PedidoRepositorio extends JpaRepository<PedidoTI, Long> {
+
+    @Override
+    Optional<PedidoTI> findById(Long aLong);
+}
