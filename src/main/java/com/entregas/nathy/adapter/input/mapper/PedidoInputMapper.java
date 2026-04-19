@@ -1,8 +1,8 @@
 package com.entregas.nathy.adapter.input.mapper;
 
 
-import com.entregas.nathy.adapter.input.dto.PedidoRequestDTO;
-import com.entregas.nathy.adapter.input.dto.PedidoResponseDTO;
+import com.entregas.nathy.adapter.input.dto.pedido.PedidoRequestDTO;
+import com.entregas.nathy.adapter.input.dto.pedido.PedidoResponseDTO;
 import com.entregas.nathy.domain.entities.Pedido;
 import com.entregas.nathy.domain.entities.PedidoRequest;
 import com.entregas.nathy.domain.entities.PedidoResponse;

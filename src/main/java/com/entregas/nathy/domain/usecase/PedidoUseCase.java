@@ -1,6 +1,5 @@
 package com.entregas.nathy.domain.usecase;
 
-import com.entregas.nathy.adapter.output.data.PedidoTI;
 import com.entregas.nathy.domain.entities.Pedido;
 import com.entregas.nathy.domain.entities.PedidoResponse;
 import com.entregas.nathy.domain.entities.PedidoSemId;

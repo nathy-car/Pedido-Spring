@@ -1,8 +1,8 @@
-package com.entregas.nathy.adapter.input.controller;
+package com.entregas.nathy.adapter.input.controller.pedido;
 
 import com.entregas.nathy.adapter.exception.handler.ErrorResponse;
-import com.entregas.nathy.adapter.input.dto.PedidoRequestDTO;
-import com.entregas.nathy.adapter.input.dto.PedidoResponseDTO;
+import com.entregas.nathy.adapter.input.dto.pedido.PedidoRequestDTO;
+import com.entregas.nathy.adapter.input.dto.pedido.PedidoResponseDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

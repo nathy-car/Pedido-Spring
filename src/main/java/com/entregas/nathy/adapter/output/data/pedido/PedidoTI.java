@@ -1,4 +1,4 @@
-package com.entregas.nathy.adapter.output.data;
+package com.entregas.nathy.adapter.output.data.pedido;
 
 import com.entregas.nathy.domain.utils.Acompanhamento;
 import com.entregas.nathy.domain.utils.Bebida;
@@ -15,7 +15,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Entity(name = "pedido")
 public class PedidoTI {
 
     @Column(name = "id", length = 100)

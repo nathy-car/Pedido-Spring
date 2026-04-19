@@ -1,8 +1,5 @@
 package com.entregas.nathy.domain.usecase;
 
-import com.entregas.nathy.NathyApplication;
-import com.entregas.nathy.adapter.output.data.PedidoTI;
-import com.entregas.nathy.adapter.output.repositorio.PedidoRepositorio;
 import com.entregas.nathy.domain.entities.Pedido;
 import com.entregas.nathy.domain.entities.PedidoRequest;
 import com.entregas.nathy.domain.entities.PedidoResponse;
@@ -14,27 +11,19 @@ import com.entregas.nathy.ports.output.AtualizarPedidoOutputPort;
 import com.entregas.nathy.ports.output.CadastrarOutputPort;
 import com.entregas.nathy.ports.output.DeletarOutputPort;
 import com.entregas.nathy.ports.output.ListarOutPutPort;
-import jakarta.inject.Inject;
-import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Rollback;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
-import static org.springframework.util.ClassUtils.isPresent;
 
 @ExtendWith(MockitoExtension.class)
 class PedidoUseCaseTest {

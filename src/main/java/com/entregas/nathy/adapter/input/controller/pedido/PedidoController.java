@@ -1,8 +1,8 @@
-package com.entregas.nathy.adapter.input.controller;
+package com.entregas.nathy.adapter.input.controller.pedido;
 
 import com.entregas.nathy.adapter.input.mapper.PedidoInputMapper;
-import com.entregas.nathy.adapter.input.dto.PedidoRequestDTO;
-import com.entregas.nathy.adapter.input.dto.PedidoResponseDTO;
+import com.entregas.nathy.adapter.input.dto.pedido.PedidoRequestDTO;
+import com.entregas.nathy.adapter.input.dto.pedido.PedidoResponseDTO;
 import com.entregas.nathy.domain.entities.PedidoResponse;
 import com.entregas.nathy.ports.input.*;
 import jakarta.validation.Valid;

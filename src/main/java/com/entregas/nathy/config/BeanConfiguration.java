@@ -1,9 +1,8 @@
 package com.entregas.nathy.config;
 
 import com.entregas.nathy.adapter.output.persistence.PedidoPersistence;
-import com.entregas.nathy.adapter.output.repositorio.PedidoRepositorio;
+import com.entregas.nathy.adapter.output.repositorio.pedido.PedidoRepositorio;
 import com.entregas.nathy.domain.usecase.PedidoUseCase;
-import com.entregas.nathy.ports.input.AtualizarPedidoInputPort;
 import com.entregas.nathy.ports.output.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,6 +1,6 @@
 package com.entregas.nathy.adapter.output.mapper;
 
-import com.entregas.nathy.adapter.output.data.PedidoTI;
+import com.entregas.nathy.adapter.output.data.pedido.PedidoTI;
 import com.entregas.nathy.domain.entities.Pedido;
 import com.entregas.nathy.domain.entities.PedidoResponse;
 import com.entregas.nathy.domain.entities.PedidoSemId;

@@ -1,7 +1,7 @@
 package com.entregas.nathy.config;
 
-import com.entregas.nathy.adapter.output.data.PedidoTI;
-import com.entregas.nathy.adapter.output.repositorio.PedidoRepositorio;
+import com.entregas.nathy.adapter.output.data.pedido.PedidoTI;
+import com.entregas.nathy.adapter.output.repositorio.pedido.PedidoRepositorio;
 import com.entregas.nathy.domain.utils.Acompanhamento;
 import com.entregas.nathy.domain.utils.Bebida;
 import com.entregas.nathy.domain.utils.PratoPrincipal;

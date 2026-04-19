@@ -1,6 +1,6 @@
-package com.entregas.nathy.adapter.output.repositorio;
+package com.entregas.nathy.adapter.output.repositorio.pedido;
 
-import com.entregas.nathy.adapter.output.data.PedidoTI;
+import com.entregas.nathy.adapter.output.data.pedido.PedidoTI;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
