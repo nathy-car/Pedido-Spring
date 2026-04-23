@@ -5,6 +5,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.http.ProblemDetail;
 import org.springframework.http.ResponseEntity;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -24,11 +25,11 @@ class PedidoExceptionHandlerTest {
                 new PedidoNaoEncontradoException("Pedido não encontrado");
 
         // WHEN
-        ResponseEntity<String> response =
+        ProblemDetail response =
                 handler.handlePedidoNaoEncontrado(exception);
 
         // THEN
-        assertEquals(404, response.getStatusCode().value());
-        assertEquals("Pedido não encontrado", response.getBody());
+        assertEquals(404, response.getStatus());
+        assertEquals("Pedido não encontrado", response.getDetail());
     }
 }

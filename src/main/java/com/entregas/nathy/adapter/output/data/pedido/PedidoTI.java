@@ -3,51 +3,42 @@ package com.entregas.nathy.adapter.output.data.pedido;
 import com.entregas.nathy.domain.utils.Acompanhamento;
 import com.entregas.nathy.domain.utils.Bebida;
 import com.entregas.nathy.domain.utils.PratoPrincipal;
-import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
+
+import java.util.UUID;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "pedido")
+@Table("pedidos")
 public class PedidoTI {
 
-    @Column(name = "id", length = 100)
-    @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long id;
+    @PrimaryKey
+    private UUID id;
 
-    @NotBlank
-    @Column(name = "user_name", length = 100, nullable = false)
     private String nome;
 
-    @NotBlank
-    @Column(name = "user_lastname", length = 100, nullable = false)
     private String sobrenome;
 
-    @NotNull
-    @Column(name = "side_dish", length = 100, nullable = false)
     private Acompanhamento acompanhamento;
 
-    @NotNull
-    @Column(name = "drinks", length = 100, nullable = false)
     private Bebida bebida;
 
-    @NotNull
-    @Column(name = "main_course", length = 100, nullable = false)
     private PratoPrincipal pratoPrincipal;
 
-    public Long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

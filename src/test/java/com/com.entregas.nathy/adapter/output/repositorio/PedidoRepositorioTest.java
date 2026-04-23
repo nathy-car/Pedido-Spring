@@ -23,7 +23,7 @@ class PedidoRepositorioTest {
 
     @Test
     void findByIdNaoEncontra() {
-        Optional<PedidoTI> resultado = pedidoRepositorio.findById(999L); // id que não existe
+        Optional<PedidoTI> resultado = pedidoRepositorio.findById("3fa85f64-5717-4562-b3fc-2c963f66afa6"); // id que não existe
 
         assertFalse(resultado.isPresent());
         assertTrue(resultado.isEmpty());

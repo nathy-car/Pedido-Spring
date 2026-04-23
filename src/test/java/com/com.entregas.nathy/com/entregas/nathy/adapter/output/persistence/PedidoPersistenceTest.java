@@ -6,18 +6,20 @@ import com.entregas.nathy.domain.utils.Acompanhamento;
 import com.entregas.nathy.domain.utils.Bebida;
 import com.entregas.nathy.domain.utils.PratoPrincipal;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.autoconfigure.data.cassandra.DataCassandraTest;
 
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DataJpaTest
 class PedidoPersistenceTest {
 
-    @Autowired
+    @Mock
     PedidoRepositorio pedidoRepositorio;
+
+
 
     @Test
     void cadastrar() {

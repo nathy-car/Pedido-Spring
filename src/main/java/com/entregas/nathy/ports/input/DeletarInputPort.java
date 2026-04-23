@@ -1,6 +1,8 @@
 package com.entregas.nathy.ports.input;
 
+import java.util.UUID;
+
 public interface DeletarInputPort {
 
-    void deletar(Long id);
+    void deletar(UUID id);
 }

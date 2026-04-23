@@ -5,10 +5,12 @@ import com.entregas.nathy.domain.utils.Acompanhamento;
 import com.entregas.nathy.domain.utils.Bebida;
 import com.entregas.nathy.domain.utils.PratoPrincipal;
 
+import java.util.UUID;
+
 
 public record PedidoResponseDTO(
 
-        Long id,
+        UUID id,
 
         Acompanhamento acompanhamento,
 
