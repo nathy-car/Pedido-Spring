@@ -32,7 +32,7 @@ public interface SwaggerPedidoController {
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Retorna o pedido"),
             @ApiResponse(responseCode = "404", description = "Pedido não encontrado")})
     @GetMapping(value = "/buscar-pedido-id/{id}")
-    ResponseEntity<PedidoResponseDTO> buscarPedidoPorId(@PathVariable UUID id);
+    ResponseEntity<PedidoResponseDTO> buscarPedidoPorId(@PathVariable Long id);
 
     @Operation(description = "Cadastra um novo pedido")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Retorna o pedido"),
@@ -44,7 +44,7 @@ public interface SwaggerPedidoController {
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Retorna o pedido alterado"),
             @ApiResponse(responseCode = "404", description = "Pedido não encontrado")})
     @PutMapping(value = "alterar-pedido/{id}")
-    ResponseEntity<PedidoResponseDTO> alterarPedido(@PathVariable UUID id,
+    ResponseEntity<PedidoResponseDTO> alterarPedido(@PathVariable Long id,
                                                     @RequestBody @Valid PedidoRequestDTO pedidoRequestDTO);
 
     @Operation(description = "Deleta o pedido pelo ID informado no repositório")
@@ -54,6 +54,6 @@ public interface SwaggerPedidoController {
                             schema = @Schema(implementation = ErrorResponse.class)
                     ))})
     @DeleteMapping(value = "deletar-pedido/{id}")
-    ResponseEntity deletar(@PathVariable UUID id);
+    ResponseEntity deletar(@PathVariable Long id);
 
 }

@@ -7,7 +7,7 @@ import com.entregas.nathy.domain.utils.PratoPrincipal;
 import java.util.UUID;
 
 public record PedidoResponse(
-        UUID id,
+        Long id,
 
         Acompanhamento acompanhamento,
 

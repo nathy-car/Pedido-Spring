@@ -8,7 +8,6 @@ import com.entregas.nathy.ports.input.*;
 import com.entregas.nathy.ports.output.*;
 
 import java.util.List;
-import java.util.UUID;
 
 public class PedidoUseCase implements ListarInputPort, CadastrarInputPort,
         DeletarInputPort,
@@ -68,7 +67,7 @@ public class PedidoUseCase implements ListarInputPort, CadastrarInputPort,
     }
 
     @Override
-    public void deletar(UUID id) {
+    public void deletar(Long id) {
 
         deletarOutputPort.deletar(id);
 
@@ -76,7 +75,7 @@ public class PedidoUseCase implements ListarInputPort, CadastrarInputPort,
 
 
     @Override
-    public PedidoResponse atualizarPedidoInputPort(UUID id, PedidoRequest pedidoRequest) {
+    public PedidoResponse atualizarPedidoInputPort(Long id, PedidoRequest pedidoRequest) {
         PedidoSemId pedidoSemId = new PedidoSemId(
                 pedidoRequest.nome(),
                 pedidoRequest.sobrenome(),
@@ -99,7 +98,7 @@ public class PedidoUseCase implements ListarInputPort, CadastrarInputPort,
     }
 
     @Override
-    public Pedido procurarPorIdInput(UUID id) {
+    public Pedido procurarPorIdInput(Long id) {
         return procurarPorIdOutputPort.procurarPorIdOutput(id).orElseThrow();
     }
 }

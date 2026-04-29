@@ -10,7 +10,7 @@ import java.util.UUID;
 
 public record PedidoResponseDTO(
 
-        UUID id,
+        Long id,
 
         Acompanhamento acompanhamento,
 

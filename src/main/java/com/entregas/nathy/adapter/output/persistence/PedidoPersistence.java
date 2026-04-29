@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @Component
 public class PedidoPersistence implements ListarOutPutPort,
@@ -41,7 +40,7 @@ public class PedidoPersistence implements ListarOutPutPort,
     }
 
     @Override
-    public void deletar(UUID id) {
+    public void deletar(Long id) {
         Optional<PedidoTI> pedidoTI = pedidoRepositorio.findById(id);
         if (pedidoTI.isEmpty()){
             throw new PedidoNaoEncontradoException("Pedido não encontrado");
@@ -50,7 +49,7 @@ public class PedidoPersistence implements ListarOutPutPort,
     }
 
     @Override
-    public Pedido atualizar(UUID id, PedidoSemId pedidoSemId) {
+    public Pedido atualizar(Long id, PedidoSemId pedidoSemId) {
         Optional<PedidoTI> pedidoTI = pedidoRepositorio.findById(id);
         PedidoTI pedido = PedidoOutputMapper.INSTANCE.pedidoSemIdParaPedidoTI(pedidoSemId);
         pedido.setId(id);
@@ -59,7 +58,7 @@ public class PedidoPersistence implements ListarOutPutPort,
     }
 
     @Override
-    public Optional<Pedido> procurarPorIdOutput(UUID id) {
+    public Optional<Pedido> procurarPorIdOutput(Long id) {
         Optional<PedidoTI> pedidoTI = pedidoRepositorio.findById(id);
         return pedidoTI.map(m -> new Pedido(
                 m.getId(),
