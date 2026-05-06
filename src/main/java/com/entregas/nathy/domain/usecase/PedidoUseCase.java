@@ -40,14 +40,13 @@ public class PedidoUseCase implements ListarInputPort, CadastrarInputPort,
     }
 
     private PedidoResponse pedidoParaPedidoResponse (Pedido pedido){
-        PedidoResponse pedidoResponse = new PedidoResponse(
+
+        return new PedidoResponse(
                 pedido.getId(),
                 pedido.getAcompanhamento(),
                 pedido.getBebida(),
                 pedido.getPratoPrincipal()
         );
-
-        return pedidoResponse;
     }
 
     @Override
@@ -61,9 +60,8 @@ public class PedidoUseCase implements ListarInputPort, CadastrarInputPort,
         );
 
         Pedido pedido = cadastrarOutputPort.cadastrar(pedidoSemId);
-        PedidoResponse pedidoResponse = pedidoParaPedidoResponse(pedido);
 
-         return pedidoResponse;
+        return pedidoParaPedidoResponse(pedido);
 
     }
 

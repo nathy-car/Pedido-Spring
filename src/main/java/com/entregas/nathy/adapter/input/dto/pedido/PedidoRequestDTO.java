@@ -5,7 +5,6 @@ import com.entregas.nathy.domain.utils.Bebida;
 import com.entregas.nathy.domain.utils.PratoPrincipal;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import org.springframework.data.cassandra.core.mapping.Column;
 
 public record PedidoRequestDTO(
 

@@ -1,7 +1,5 @@
 package com.entregas.nathy.domain.utils;
 
-import org.apache.catalina.User;
-
 public enum UserRoles {
     ADMIN("admin"),
     USER("user");

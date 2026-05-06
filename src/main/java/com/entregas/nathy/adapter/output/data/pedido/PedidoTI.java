@@ -3,8 +3,6 @@ package com.entregas.nathy.adapter.output.data.pedido;
 import com.entregas.nathy.domain.utils.Acompanhamento;
 import com.entregas.nathy.domain.utils.Bebida;
 import com.entregas.nathy.domain.utils.PratoPrincipal;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

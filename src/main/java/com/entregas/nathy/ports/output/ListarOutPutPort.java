@@ -1,6 +1,5 @@
 package com.entregas.nathy.ports.output;
 
-import com.entregas.nathy.domain.entities.Pedido;
 import com.entregas.nathy.domain.entities.PedidoResponse;
 
 import java.util.List;

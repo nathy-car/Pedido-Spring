@@ -4,14 +4,11 @@ package com.entregas.nathy.adapter.exception.handler;
 import com.entregas.nathy.adapter.exception.exception.PedidoNaoEncontradoException;
 import io.swagger.v3.oas.annotations.media.Schema;
 import org.springframework.http.*;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import java.net.URI;
-import java.time.LocalDateTime;
 
 @Schema(name = "ErrorResponse")
 @RestControllerAdvice
