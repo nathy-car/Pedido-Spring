@@ -40,7 +40,7 @@ public class PedidoPersistence implements ListarOutPutPort,
     }
 
     @Override
-    public void deletar(Long id) {
+    public void deletar(String id) {
         Optional<PedidoTI> pedidoTI = pedidoRepositorio.findById(id);
         if (pedidoTI.isEmpty()){
             throw new PedidoNaoEncontradoException("Pedido não encontrado");
@@ -49,7 +49,7 @@ public class PedidoPersistence implements ListarOutPutPort,
     }
 
     @Override
-    public Pedido atualizar(Long id, PedidoSemId pedidoSemId) {
+    public Pedido atualizar(String id, PedidoSemId pedidoSemId) {
         Optional<PedidoTI> pedidoTI = pedidoRepositorio.findById(id);
         PedidoTI pedido = PedidoOutputMapper.INSTANCE.pedidoSemIdParaPedidoTI(pedidoSemId);
         pedido.setId(id);
@@ -58,7 +58,7 @@ public class PedidoPersistence implements ListarOutPutPort,
     }
 
     @Override
-    public Optional<Pedido> procurarPorIdOutput(Long id) {
+    public Optional<Pedido> procurarPorIdOutput(String id) {
         Optional<PedidoTI> pedidoTI = pedidoRepositorio.findById(id);
         return pedidoTI.map(m -> new Pedido(
                 m.getId(),

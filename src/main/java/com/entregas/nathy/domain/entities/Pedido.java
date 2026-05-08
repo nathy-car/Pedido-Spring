@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public class Pedido {
 
-    private Long id;
+    private String id;
 
     private String nome;
 
@@ -24,11 +24,11 @@ public class Pedido {
 
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -72,7 +72,7 @@ public class Pedido {
         this.pratoPrincipal = pratoPrincipal;
     }
 
-    public Pedido(Long id, String nome, String sobrenome, Acompanhamento acompanhamento, Bebida bebida, PratoPrincipal pratoPrincipal) {
+    public Pedido(String id, String nome, String sobrenome, Acompanhamento acompanhamento, Bebida bebida, PratoPrincipal pratoPrincipal) {
         this.id = id;
         this.nome = nome;
         this.sobrenome = sobrenome;

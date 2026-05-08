@@ -7,5 +7,5 @@ import java.util.UUID;
 
 public interface AtualizarPedidoInputPort {
 
-    PedidoResponse atualizarPedidoInputPort(Long id, PedidoRequest pedidoRequest);
+    PedidoResponse atualizarPedidoInputPort(String id, PedidoRequest pedidoRequest);
 }

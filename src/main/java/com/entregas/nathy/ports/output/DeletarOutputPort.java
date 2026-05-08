@@ -5,5 +5,5 @@ import java.util.UUID;
 public interface DeletarOutputPort {
 
 
-    void deletar(Long id);
+    void deletar(String id);
 }

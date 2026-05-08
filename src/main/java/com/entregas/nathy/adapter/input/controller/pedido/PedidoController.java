@@ -41,7 +41,7 @@ public class PedidoController implements SwaggerPedidoController{
     }
 
     @Override
-    public ResponseEntity<PedidoResponseDTO> buscarPedidoPorId(@PathVariable Long id){
+    public ResponseEntity<PedidoResponseDTO> buscarPedidoPorId(@PathVariable String id){
         PedidoResponse pedidoResponse = PedidoInputMapper.INSTANCE.converterPedidoPedidoResponse(procurarPorIdInputPort.procurarPorIdInput(id));
         PedidoResponseDTO pedidoResponseDTO = PedidoInputMapper.INSTANCE.converterPedidoResponseParaPedidoResponseDTO(pedidoResponse);
         return ResponseEntity.ok(pedidoResponseDTO);
@@ -59,7 +59,7 @@ public class PedidoController implements SwaggerPedidoController{
     }
 
     @Override
-    public ResponseEntity<PedidoResponseDTO> alterarPedido(@PathVariable Long id,
+    public ResponseEntity<PedidoResponseDTO> alterarPedido(@PathVariable String id,
                                                            @RequestBody @Valid PedidoRequestDTO pedidoRequestDTO){
         PedidoResponse pedidoResponse = atualizarPedidoInputPort.atualizarPedidoInputPort(id, PedidoInputMapper.INSTANCE.converterPedidoRequestDTOParaPedidoRequest(pedidoRequestDTO));
         PedidoResponseDTO pedidoResponseDTO = PedidoInputMapper.INSTANCE.converterPedidoResponseParaPedidoResponseDTO(pedidoResponse);
@@ -68,7 +68,7 @@ public class PedidoController implements SwaggerPedidoController{
     }
 
     @Override
-    public ResponseEntity deletar(@PathVariable Long id){
+    public ResponseEntity deletar(@PathVariable String id){
         deletarInputPort.deletar(id);
         return ResponseEntity.noContent().build();
     }

@@ -115,7 +115,7 @@ class PedidoUseCaseTest {
     @Test
     @DisplayName("Deletar um pedido por Id")
     void deletar() {
-        Long id = 1L;
+        String id = "teste";
 
         pedidoUseCase.deletar(id);
 
@@ -125,7 +125,7 @@ class PedidoUseCaseTest {
     @Test
     void atualizarPedido() {
 
-        Long id = 1L;
+        String id = "teste";
 
         PedidoRequest pedidoRequest = new PedidoRequest(
                 "sdcwec",
@@ -142,7 +142,7 @@ class PedidoUseCaseTest {
                 pedidoRequest.bebida(),
                 pedidoRequest.pratoPrincipal());
 
-        when(atualizarPedidoOutputPort.atualizar(anyLong(), any(PedidoSemId.class)))
+        when(atualizarPedidoOutputPort.atualizar(anyString(), any(PedidoSemId.class)))
                 .thenReturn(pedido);
         // ✅ Act
         PedidoResponse response = pedidoUseCase.atualizarPedidoInputPort(id, pedidoRequest);

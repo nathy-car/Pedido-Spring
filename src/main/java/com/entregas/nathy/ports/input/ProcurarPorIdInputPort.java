@@ -7,5 +7,5 @@ import java.util.UUID;
 public interface ProcurarPorIdInputPort {
 
 
-    Pedido procurarPorIdInput(Long id);
+    Pedido procurarPorIdInput(String id);
 }

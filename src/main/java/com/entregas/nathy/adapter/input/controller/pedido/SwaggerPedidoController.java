@@ -14,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.UUID;
 
 @RequestMapping(value = "/pedido")
 @Tag(name = "Pedido")
@@ -32,7 +31,7 @@ public interface SwaggerPedidoController {
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Retorna o pedido"),
             @ApiResponse(responseCode = "404", description = "Pedido não encontrado")})
     @GetMapping(value = "/buscar-pedido-id/{id}")
-    ResponseEntity<PedidoResponseDTO> buscarPedidoPorId(@PathVariable Long id);
+    ResponseEntity<PedidoResponseDTO> buscarPedidoPorId(@PathVariable String id);
 
     @Operation(description = "Cadastra um novo pedido")
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Retorna o pedido"),
@@ -44,7 +43,7 @@ public interface SwaggerPedidoController {
     @ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Retorna o pedido alterado"),
             @ApiResponse(responseCode = "404", description = "Pedido não encontrado")})
     @PutMapping(value = "alterar-pedido/{id}")
-    ResponseEntity<PedidoResponseDTO> alterarPedido(@PathVariable Long id,
+    ResponseEntity<PedidoResponseDTO> alterarPedido(@PathVariable String id,
                                                     @RequestBody @Valid PedidoRequestDTO pedidoRequestDTO);
 
     @Operation(description = "Deleta o pedido pelo ID informado no repositório")
@@ -54,6 +53,6 @@ public interface SwaggerPedidoController {
                             schema = @Schema(implementation = ErrorResponse.class)
                     ))})
     @DeleteMapping(value = "deletar-pedido/{id}")
-    ResponseEntity deletar(@PathVariable Long id);
+    ResponseEntity deletar(@PathVariable String id);
 
 }
