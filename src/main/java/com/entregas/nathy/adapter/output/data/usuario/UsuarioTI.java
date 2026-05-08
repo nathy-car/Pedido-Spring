@@ -3,6 +3,7 @@ package com.entregas.nathy.adapter.output.data.usuario;
 import com.entregas.nathy.domain.utils.UserRoles;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,16 +12,14 @@ import java.util.Collection;
 import java.util.List;
 
 @Getter
-@AllArgsConstructor
 @Setter
+@AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Table(name = "Usuario")
-@EqualsAndHashCode(of = "id")
+@Document(collection = "usuarios")
+@Table(name = "users")
 public class UsuarioTI implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
     private String login;
